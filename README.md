@@ -1,24 +1,49 @@
-# README
+# Realtime Search Engine Demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple Ruby on Rails application that provides a realtime search feature using an API endpoint.
 
-Things you may want to cover:
+## Requirements
+- Ruby 3.1.4
+- Rails 7.x
 
-* Ruby version
+## Installation
 
-* System dependencies
+```bash
+# Clone the repository
+git clone https://github.com/elbadawyy/realtime-search-demo.git
 
-* Configuration
+cd realtime_search_engine_demo
 
-* Database creation
+# Install dependencies
+bundle install
 
-* Database initialization
+# Setup the database
+rails db:create db:migrate
 
-* How to run the test suite
+# Start the server
+rails server
 
-* Services (job queues, cache servers, search engines, etc.)
+API Usage
+Search Endpoint
+GET /api/search
 
-* Deployment instructions
+Query Parameters:
 
-* ...
+query (string) — The search keyword.
+
+ip (string, optional) — Client IP address.
+
+Example Request:
+
+curl "http://localhost:3000/api/search?query=ruby&ip=127.0.0.1"
+Example Response:
+
+
+[
+  {
+    "id": 1,
+    "query_string": "ruby",
+    "ip": "127.0.0.1",
+    "created_at": "2025-08-10T12:34:56Z"
+  }
+]
