@@ -1,0 +1,18 @@
+<h1>Top Queries</h1>
+
+<ul id="top-queries">
+  <!-- Will be filled by JavaScript -->
+</ul>
+
+<script>
+  fetch("/analytics.json")
+    .then(response => response.json())
+    .then(data => {
+      const ul = document.getElementById("top-queries");
+      Object.entries(data).forEach(([query, count]) => {
+        const li = document.createElement("li");
+        li.textContent = `${query}: ${count} times`;
+        ul.appendChild(li);
+      });
+    });
+</script>
